@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio di Sonia Mereu (BlocklyS) - Data Analyst, Business Intelligence & Geo-Analytics Specialist" />
+  <title>Sonia Mereu | Data Analyst Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Barra di Navigazione -->
+  <header class="site-header">
+    <nav class="nav-container" aria-label="Navigazione principale">
+      <a href="#" class="brand-logo">Sonia Mereu<span>.data</span></a>
+    <ul class="nav-links">
+        <li><a href="#about">Profilo</a></li>
+        <li><a href="#projects">Progetti</a></li>
+        <li><a href="#certifications">Certificazioni</a></li>
+        <li><a href="#skills">Competenze</a></li>
+        <li><a href="#contact">Contatti</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Sezione 1: Hero / Bio breve -->
+    <section id="about" class="section hero-section">
+      <div class="container hero-content">
+        <span class="badge">Data Analyst & QA Specialist • Torino, Italia</span>
+        <h1 class="hero-title">Ciao, sono <span class="highlight">Sonia Mereu</span>.</h1>
+        <p class="hero-bio">
+          Data Analyst con solida esperienza in <strong>Business Intelligence</strong>, 
+          <strong>Quality Assurance</strong> e conformità dati maturata in contesti internazionali (ex Google & Meta partner). 
+          Specializzata nell'estrazione, trasformazione e visualizzazione di dati tramite SQL, Google BigQuery, R e tecniche avanzate di Geo-Analytics.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">Esplora i Progetti</a>
+          <a href="https://github.com/BlocklyS" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+            GitHub (BlocklyS) ↗
+          </a>
+          <a href="https://www.linkedin.com/in/sonia-mereu" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+            LinkedIn ↗
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sezione 2: Progetti in evidenza -->
+    <section id="projects" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Progetti Analitici & Data Artifacts</h2>
+          <p class="section-subtitle">Casi studio, pipeline SQL, dashboard BI e analisi geospaziali.</p>
+        </div>
+
+       <div class="projects-grid">
+          <!-- Progetto 1: Ardilla Violeta -->
+          <article class="project-card">
+            <div class="project-header">
+              <span class="project-tag">Web Platform & GIS</span>
+              <a href="https://ardillavioleta.es" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="Visita il sito Ardilla Violeta">↗</a>
+            </div>
+            <h3 class="project-title">Ardilla Violeta – Hub Geospaziale</h3>
+            <p class="project-description">
+              Piattaforma e directory di riferimento per professionisti GIS e data scientist territoriali. Hub dedicato a open data geografici, tool open source, remote sensing e formazione.
+            </p>
+            <ul class="tech-stack" aria-label="Tecnologie usate">
+              <li>WebGIS</li>
+              <li>Open Data</li>
+              <li>QGIS</li>
+              <li>Geo-Community</li>
+            </ul>
+          </article>
+
+          <!-- Progetto 2: Geo Analytics Playbook -->
+          <article class="project-card">
+            <div class="project-header">
+              <span class="project-tag">Geo-Analytics</span>
+              <a href="https://github.com/BlocklyS" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="Vedi progetto Geo Analytics">↗</a>
+            </div>
+            <h3 class="project-title">Geo Analytics Playbook – Spatial SQL</h3>
+            <p class="project-description">
+              Pattern SQL riutilizzabili per analisi geospaziali su BigQuery applicate a dataset Overture Maps per l'accessibilità urbana. Aggregazione spaziale con indicizzazione H3 e ottimizzazione costi cloud.
+            </p>
+            <ul class="tech-stack" aria-label="Tecnologie usate">
+              <li>BigQuery Spatial</li>
+              <li>H3 Indexing</li>
+              <li>GIS</li>
+              <li>Overture Maps</li>
+            </ul>
+          </article>
+
+          <!-- Progetto 3: Divvy Bike Chicago -->
+          <article class="project-card">
+            <div class="project-header">
+              <span class="project-tag">Business Intelligence</span>
+              <a href="https://github.com/BlocklyS" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="Vedi progetto Divvy Bike">↗</a>
+            </div>
+            <h3 class="project-title">Divvy Bike Chicago – Analytics & BI</h3>
+            <p class="project-description">
+              Consolidamento e normalizzazione di dati estratti da 12 tabelle sorgente (Amazon S3). Query SQL avanzate su BigQuery, definizione KPI e dashboard interattiva su Looker Studio.
+            </p>
+            <ul class="tech-stack" aria-label="Tecnologie usate">
+              <li>SQL</li>
+              <li>Google BigQuery</li>
+              <li>Looker Studio</li>
+              <li>Amazon S3</li>
+            </ul>
+          </article>
+
+          <!-- Progetto 4: Global Country Information Dataset -->
+          <article class="project-card">
+            <div class="project-header">
+              <span class="project-tag">Statistica & EDA</span>
+              <a href="https://github.com/BlocklyS" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="Vedi progetto Country Dataset">↗</a>
+            </div>
+            <h3 class="project-title">Global Country Information 2023</h3>
+            <p class="project-description">
+              Analisi esplorativa dei dati (EDA) e Principal Component Analysis (PCA) su dataset socioeconomici globali con linguaggio R (tidyverse, SmartEDA) in Google Colab.
+            </p>
+            <ul class="tech-stack" aria-label="Tecnologie usate">
+              <li>Linguaggio R</li>
+              <li>PCA & Statistica</li>
+              <li>tidyverse</li>
+              <li>Google Colab</li>
+            </ul>
+          </article>
+        </div>
+
+        <!-- Sezione: Certificazioni Professionali -->
+    <section id="certifications" class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Professional Certifications</h2>
+          <p class="section-subtitle">Percorsi formativi accreditati, diplomi e programmi di specializzazione.</p>
+        </div>
+
+        <div class="certs-grid">
+          <!-- Certificato 1: Google -->
+          <article class="cert-card">
+            <div class="cert-icon-wrapper">
+              <span class="cert-icon">🎓</span>
+            </div>
+            <div class="cert-details">
+              <span class="cert-issuer">Google & Coursera</span>
+              <h3 class="cert-title">Google Data Analytics Professional Certificate</h3>
+              <p class="cert-desc">Elaborazione, pulizia, analisi ed estrazione di insight con SQL, R, fogli di calcolo e Tableau.</p>
+              <div class="cert-meta">
+                <span class="cert-badge">Professional Certificate</span>
+                <a href="https://www.credly.com/badges/2ec5f378-88d6-4522-af72-e1c846a0d48d/public_url" target="_blank" rel="noopener noreferrer" class="cert-verify-link">
+                  Verifica Credenziale ↗
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Certificato 2: Aspasia -->
+          <article class="cert-card">
+            <div class="cert-icon-wrapper">
+              <span class="cert-icon">📊</span>
+            </div>
+            <div class="cert-details">
+              <span class="cert-issuer">Aspasia</span>
+              <h3 class="cert-title">Big Data II Professional Diploma</h3>
+              <p class="cert-desc">Specializzazione su architetture per la gestione di grandi volumi di dati, pipeline e framework distribuiti.</p>
+              <div class="cert-meta">
+                <span class="cert-badge">Professional Diploma</span>
+                <a href="assets/certifications/bigData-aspasia.pdf" target="_blank" rel="noopener noreferrer" class="cert-verify-link">
+                  Visualizza Certificato ↗
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Certificato 3: REACT EU - Project Management -->
+          <article class="cert-card">
+            <div class="cert-icon-wrapper">
+              <span class="cert-icon">📋</span>
+            </div>
+            <div class="cert-details">
+              <span class="cert-issuer">REACT EU</span>
+              <h3 class="cert-title">Project Management Certificate</h3>
+              <p class="cert-desc">Pianificazione, monitoraggio KPI di progetto e metodologie operative per Project Manager.</p>
+              <div class="cert-meta">
+                <span class="cert-badge">Project Management</span>
+                <a href="assets/certifications/project-management-reactEU.pdf" target="_blank" rel="noopener noreferrer" class="cert-verify-link">
+                  Visualizza Certificato ↗
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Certificato 4: Women+ in Geospatial -->
+          <article class="cert-card">
+            <div class="cert-icon-wrapper">
+              <span class="cert-icon">🌍</span>
+            </div>
+            <div class="cert-details">
+              <span class="cert-issuer">Women+ in Geospatial Community</span>
+              <h3 class="cert-title">Mentorship Cohort Alumna</h3>
+              <p class="cert-desc">Partecipazione al programma di mentorship 2023 per donne e professioniste nel settore geospaziale, con focus remote sensing e GIS.</p>
+              <div class="cert-meta">
+                <span class="cert-badge">Geospatial Leadership</span>
+                <a href="assets/certifications/wig-mentorship-remotesensing.pdf" target="_blank" rel="noopener noreferrer" class="cert-verify-link">
+                  Visualizza Certificato ↗
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Certificato 5: REACT EU - Integrated Logistics -->
+          <article class="cert-card">
+            <div class="cert-icon-wrapper">
+              <span class="cert-icon">📦</span>
+            </div>
+            <div class="cert-details">
+              <span class="cert-issuer">REACT EU</span>
+              <h3 class="cert-title">Integrated Logistics Certification</h3>
+              <p class="cert-desc">Gestione della supply chain integrata, flussi operativi e tracciamento dati di processo.</p>
+              <div class="cert-meta">
+                <span class="cert-badge">Logistica & Flussi</span>
+                <a href="assets/certifications/logistica-integral-diploma-reactEU.pdf" target="_blank" rel="noopener noreferrer" class="cert-verify-link">
+                  Visualizza Certificato ↗
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Certificato 6: Esri - ArcGIS Imagery MOOC -->
+          <article class="cert-card">
+            <div class="cert-icon-wrapper">
+              <span class="cert-icon">🛰️</span>
+            </div>
+            <div class="cert-details">
+              <span class="cert-issuer">Esri</span>
+              <h3 class="cert-title">The ArcGIS Imagery MOOC: Foundations and Frontiers</h3>
+              <p class="cert-desc">Analisi raster, elaborazione di immagini satellitari e aeree, deep learning e visualizzazione geospaziale avanzata con ArcGIS.</p>
+              <div class="cert-meta">
+                <span class="cert-badge">Remote Sensing & Imagery</span>
+                <a href="assets/certifications/arcGIS-imagery-esri.pdf" target="_blank" rel="noopener noreferrer" class="cert-verify-link">
+                  Visualizza Certificato ↗
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Certificato 7: Esri - Cartography -->
+          <article class="cert-card">
+            <div class="cert-icon-wrapper">
+              <span class="cert-icon">🗺️</span>
+            </div>
+            <div class="cert-details">
+              <span class="cert-issuer">Esri</span>
+              <h3 class="cert-title">Cartography. MOOC</h3>
+              <p class="cert-desc">Principi di design cartografico professionale, gerarchia visiva, tipografia ed efficacia narrativa delle mappe con ArcGIS Pro.</p>
+              <div class="cert-meta">
+                <span class="cert-badge">Cartographic Design</span>
+                <a href="assets/certifications/cartography-esri.pdf" target="_blank" rel="noopener noreferrer" class="cert-verify-link">
+                  Visualizza Certificato ↗
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Certificato 8: Esri - Going Places with Spatial Analysis -->
+          <article class="cert-card">
+            <div class="cert-icon-wrapper">
+              <span class="cert-icon">🧭</span>
+            </div>
+            <div class="cert-details">
+              <span class="cert-issuer">Esri</span>
+              <h3 class="cert-title">Going Places with Spatial Analysis</h3>
+              <p class="cert-desc">Metodologie avanzate di analisi spaziale, modellazione di idoneità e prossimità, pattern detection e decision-making geografico.</p>
+              <div class="cert-meta">
+                <span class="cert-badge">Spatial Analytics</span>
+                <a href="assets/certifications/going-places-with-spatial-analysis-esri.pdf" target="_blank" rel="noopener noreferrer" class="cert-verify-link">
+                  Visualizza Certificato ↗
+                </a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sezione 3: Competenze Tecniche -->
+    <section id="skills" class="section bg-subtle">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Competenze Tecniche & Strumenti</h2>
+          <p class="section-subtitle">Il mio stack operativo per l'analisi dati, la BI e la qualità dei processi.</p>
+        </div>
+
+        <div class="skills-wrapper">
+          <!-- Categoria 1 -->
+          <div class="skill-category">
+            <h3>Data Warehousing & Querying</h3>
+            <ul class="skill-list">
+              <li>SQL Avanzato</li>
+              <li>Google BigQuery</li>
+              <li>duckDB</li>
+              <li>Modellazione Dati & ETL</li>
+              <li>Hadoop (Base)</li>
+            </ul>
+          </div>
+
+          <!-- Categoria 2 -->
+          <div class="skill-category">
+            <h3>BI & Data Visualization</h3>
+            <ul class="skill-list">
+              <li>Looker Studio</li>
+              <li>Tableau</li>
+              <li>Progettazione Dashboard KPI</li>
+              <li>Microsoft Excel Avanzato</li>
+              <li>Google Sheets</li>
+            </ul>
+          </div>
+
+          <!-- Categoria 3 -->
+          <div class="skill-category">
+            <h3>Statistica & Geo-Analytics</h3>
+            <ul class="skill-list">
+              <li>Linguaggio R (tidyverse)</li>
+              <li>Analisi Esplorativa (EDA / PCA)</li>
+              <li>QGIS & Kepler.gl</li>
+              <li>Indicizzazione Spaziale H3</li>
+              <li>Google Earth Engine</li>
+            </ul>
+          </div>
+
+          <!-- Categoria 4 -->
+          <div class="skill-category">
+            <h3>Quality Assurance & Metodologie</h3>
+            <ul class="skill-list">
+              <li>Data Auditing & Compliance</li>
+              <li>AI / Content Quality Control</li>
+              <li>Project Management (REACT EU)</li>
+              <li>Google Analytics Certified</li>
+              <li>Inglese (C1) • Francese (C1) • Spagnolo (B2)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Sezione 4: Footer e Contatti -->
+  <footer id="contact" class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-cta">
+        <h2>Interessato a una collaborazione o ai miei progetti?</h2>
+        <p>Disponibile per opportunità in ambito Data Analytics, BI e Geo-Analytics a Torino o da remoto.</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="https://github.com/BlocklyS" target="_blank" rel="noopener noreferrer" class="contact-link">
+          GitHub: <strong>BlocklyS</strong>
+        </a>
+        <a href="https://www.linkedin.com/in/sonia-mereu" target="_blank" rel="noopener noreferrer" class="contact-link">
+          LinkedIn: <strong>in/sonia-mereu</strong>
+        </a>
+        <span class="contact-link">
+          Posizione: <strong>Torino, Italia</strong>
+        </span>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Sonia Mereu (BlocklyS). Hostato con GitHub Pages.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
