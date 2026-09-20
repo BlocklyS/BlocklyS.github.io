@@ -1,511 +1,377 @@
-/* ==========================================================================
-   1. VARIABILI & CONFIGURAZIONE GLOBALE
-   ========================================================================== */
+
 :root {
-  /* Palette Colori (Dark Mode moderna) */
-  --bg-main: #0b0f19;
-  --bg-card: #111827;
-  --bg-card-hover: #1f2937;
-  --bg-subtle: #0f172a;
-  --border-color: #1e293b;
-  --border-focus: #38bdf8;
-  
-  --text-primary: #f8fafc;
-  --text-secondary: #94a3b8;
-  --accent: #38bdf8;
-  --accent-glow: rgba(56, 189, 248, 0.15);
-  
-  /* Tipografia */
-  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-  
-  /* Layout & Spaziatura */
-  --container-max: 1100px;
-  --radius-sm: 6px;
-  --radius-md: 12px;
-  --transition-fast: 0.2s ease-in-out;
+  --bg-primary: #f8fafc;       /* Grigio chiarissimo elegante */
+  --bg-surface: #ffffff;       /* Bianco puro per le card */
+  --bg-subtle: #f1f5f9;
+  --text-main: #0f172a;        /* Blu notte profondo per il testo (non nero piatto) */
+  --text-muted: #64748b;       /* Grigio medio leggibile */
+  --accent: #2563eb;           /* Blu tech moderno */
+  --accent-light: #eff6ff;
+  --accent-purple: #7c3aed;    /* Accento viola stile Ardilla Violeta */
+  --border: #e2e8f0;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 8px 10px -6px rgba(0, 0, 0, 0.03);
+  --radius: 12px;
 }
 
-/* ==========================================================================
-   2. RESET & BASE
-   ========================================================================== */
-*, *::before, *::after {
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-html {
-  scroll-behavior: smooth;
-  font-size: 100%;
-}
-
 body {
-  font-family: var(--font-sans);
-  background-color: var(--bg-main);
-  color: var(--text-primary);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-main);
   line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-  transition: color var(--transition-fast);
-}
-
-ul {
-  list-style: none;
-}
-
-/* ==========================================================================
-   3. LAYOUT UTILITIES
-   ========================================================================== */
 .container {
-  width: 90%;
-  max-width: var(--container-max);
-  margin-inline: auto;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 24px;
 }
 
 .section {
-  padding: 5rem 0;
-}
-
-.bg-subtle {
-  background-color: var(--bg-subtle);
+  padding: 70px 0;
 }
 
 .section-header {
-  margin-bottom: 3rem;
+  text-align: center;
+  margin-bottom: 48px;
 }
 
 .section-title {
-  font-size: 2rem;
-  font-weight: 700;
-  color: var(--text-primary);
-  letter-spacing: -0.02em;
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: var(--text-main);
+  margin-bottom: 8px;
 }
 
 .section-subtitle {
-  color: var(--text-secondary);
-  margin-top: 0.5rem;
+  color: var(--text-muted);
+  font-size: 1.05rem;
 }
 
-/* ==========================================================================
-   4. HEADER & NAV
-   ========================================================================== */
+/* Header & Nav */
 .site-header {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
   position: sticky;
   top: 0;
   z-index: 100;
-  background-color: rgba(11, 15, 25, 0.85);
-  backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--border-color);
+  padding: 16px 0;
 }
 
 .nav-container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 24px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.25rem 5%;
-  max-width: var(--container-max);
-  margin-inline: auto;
 }
 
 .brand-logo {
+  font-weight: 800;
   font-size: 1.25rem;
-  font-weight: 700;
-  letter-spacing: -0.03em;
+  color: var(--text-main);
+  text-decoration: none;
 }
 
 .brand-logo span {
-  color: var(--accent);
+  color: var(--accent-purple);
 }
 
 .nav-links {
+  list-style: none;
   display: flex;
-  gap: 1.5rem;
+  gap: 20px;
 }
 
 .nav-links a {
-  font-size: 0.95rem;
-  color: var(--text-secondary);
+  text-decoration: none;
+  color: var(--text-muted);
+  font-weight: 500;
+  transition: color 0.2s;
 }
 
-.nav-links a:hover,
-.nav-links a:focus-visible {
+.nav-links a:hover {
   color: var(--accent);
 }
 
-/* ==========================================================================
-   5. SEZIONE HERO (BIO)
-   ========================================================================== */
-.hero-section {
-  padding: 7rem 0 5rem;
+/* Hero Section */
+.hero-layout {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
 }
 
 .hero-content {
-  max-width: 760px;
+  flex: 1;
 }
 
 .badge {
   display: inline-block;
-  font-size: 0.8rem;
-  font-weight: 600;
+  background: var(--accent-light);
   color: var(--accent);
-  background: var(--accent-glow);
-  padding: 0.35rem 0.85rem;
-  border-radius: 999px;
-  border: 1px solid rgba(56, 189, 248, 0.3);
-  margin-bottom: 1.5rem;
+  padding: 6px 14px;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 16px;
 }
 
 .hero-title {
-  font-size: clamp(2.5rem, 6vw, 4rem);
-  line-height: 1.15;
+  font-size: 2.75rem;
   font-weight: 800;
-  letter-spacing: -0.03em;
-  margin-bottom: 1.25rem;
+  line-height: 1.2;
+  margin-bottom: 16px;
 }
 
 .highlight {
-  color: var(--accent);
+  background: linear-gradient(120deg, var(--accent), var(--accent-purple));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .hero-bio {
+  color: var(--text-muted);
   font-size: 1.15rem;
-  color: var(--text-secondary);
-  margin-bottom: 2.25rem;
+  margin-bottom: 28px;
 }
 
 .hero-actions {
   display: flex;
-  gap: 1rem;
+  gap: 12px;
   flex-wrap: wrap;
 }
 
 .btn {
   display: inline-block;
-  padding: 0.75rem 1.5rem;
+  padding: 10px 22px;
+  border-radius: 8px;
   font-weight: 600;
-  font-size: 0.95rem;
-  border-radius: var(--radius-sm);
-  transition: all var(--transition-fast);
+  text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
 .btn-primary {
-  background-color: var(--accent);
-  color: #000;
+  background: var(--accent);
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
 }
 
 .btn-primary:hover {
-  background-color: #7dd3fc;
-  box-shadow: 0 0 15px var(--accent-glow);
+  background: #1d4ed8;
+  transform: translateY(-2px);
 }
 
 .btn-secondary {
-  border: 1px solid var(--border-color);
-  background-color: var(--bg-card);
-  color: var(--text-primary);
+  background: var(--bg-surface);
+  color: var(--text-main);
+  border: 1px solid var(--border);
 }
 
 .btn-secondary:hover {
-  background-color: var(--bg-card-hover);
-  border-color: var(--accent);
+  border-color: #cbd5e1;
+  background: var(--bg-subtle);
 }
 
-/* ==========================================================================
-   6. SEZIONE PROGETTI (GRID)
-   ========================================================================== */
+/* Foto Profilo */
+.hero-avatar {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--bg-surface);
+  box-shadow: var(--shadow-md);
+}
+
+/* Griglia Progetti */
 .projects-grid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
-}
-
-@media (min-width: 768px) {
-  .projects-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (min-width: 1024px) {
-  .projects-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 28px;
 }
 
 .project-card {
-  background-color: var(--bg-card);
-  border: 1px solid var(--border-color);
-  border-radius: var(--radius-md);
-  padding: 1.75rem;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
   display: flex;
   flex-direction: column;
-  transition: transform var(--transition-fast), border-color var(--transition-fast);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .project-card:hover {
-  transform: translateY(-4px);
-  border-color: rgba(56, 189, 248, 0.4);
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.project-img-wrapper {
+  width: 100%;
+  height: 190px;
+  background: #e2e8f0;
+  overflow: hidden;
+}
+
+.project-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-img {
+  transform: scale(1.04);
+}
+
+.project-body {
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .project-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 1rem;
+  margin-bottom: 12px;
 }
 
 .project-tag {
   font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  color: var(--accent);
   font-weight: 700;
+  text-transform: uppercase;
+  color: var(--accent-purple);
+  background: #f5f3ff;
+  padding: 4px 10px;
+  border-radius: 6px;
 }
 
 .project-link {
-  font-size: 1.25rem;
-  color: var(--text-secondary);
-}
-
-.project-link:hover {
-  color: var(--accent);
+  color: var(--text-muted);
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.1rem;
 }
 
 .project-title {
   font-size: 1.25rem;
-  margin-bottom: 0.75rem;
+  font-weight: 700;
+  margin-bottom: 8px;
 }
 
 .project-description {
-  color: var(--text-secondary);
+  color: var(--text-muted);
   font-size: 0.95rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 16px;
   flex-grow: 1;
 }
 
 .tech-stack {
+  list-style: none;
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: 6px;
 }
 
 .tech-stack li {
-  font-size: 0.8rem;
-  background-color: var(--bg-main);
-  color: var(--text-secondary);
-  padding: 0.25rem 0.6rem;
-  border-radius: var(--radius-sm);
-  border: 1px solid var(--border-color);
+  background: var(--bg-subtle);
+  color: var(--text-main);
+  font-size: 0.75rem;
+  padding: 4px 8px;
+  border-radius: 4px;
 }
 
-/* ==========================================================================
-   7. SEZIONE COMPETENZE
-   ========================================================================== */
-.skills-wrapper {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-}
-
-@media (min-width: 768px) {
-  .skills-wrapper {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-.skill-category {
-  background-color: var(--bg-card);
-  border: 1px solid var(--border-color);
-  padding: 2rem;
-  border-radius: var(--radius-md);
-}
-
-.skill-category h3 {
-  font-size: 1.2rem;
-  margin-bottom: 1.25rem;
-  color: var(--accent);
-}
-
-.skill-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.75rem;
-}
-
-.skill-list li {
-  background-color: var(--bg-main);
-  border: 1px solid var(--border-color);
-  padding: 0.5rem 1rem;
-  border-radius: var(--radius-sm);
-  font-size: 0.9rem;
-  color: var(--text-primary);
-}
-
-/* ==========================================================================
-   8. FOOTER
-   ========================================================================== */
-.site-footer {
-  border-top: 1px solid var(--border-color);
-  padding: 4rem 0 2rem;
-  background-color: var(--bg-main);
-}
-
-.footer-content {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-.footer-cta h2 {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-}
-
-.footer-cta p {
-  color: var(--text-secondary);
-}
-
-.footer-links {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
-
-@media (min-width: 600px) {
-  .footer-links {
-    flex-direction: row;
-    gap: 2rem;
-  }
-}
-
-.contact-link {
-  color: var(--text-secondary);
-  font-size: 0.95rem;
-}
-
-.contact-link strong {
-  color: var(--accent);
-}
-
-.contact-link:hover {
-  text-decoration: underline;
-}
-
-.footer-bottom {
-  margin-top: 2rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid var(--border-color);
-  text-align: center;
-  font-size: 0.85rem;
-  color: var(--text-secondary);
-}
-
-/* ==========================================================================
-   9. SEZIONE CERTIFICAZIONI PROFESSIONALI
-   ========================================================================== */
+/* Griglia Certificazioni */
 .certs-grid {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
-}
-
-@media (min-width: 768px) {
-  .certs-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
 }
 
 .cert-card {
-  background-color: var(--bg-card);
-  border: 1px solid var(--border-color);
-  border-radius: var(--radius-md);
-  padding: 1.5rem;
+  background: var(--bg-surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
   display: flex;
-  gap: 1.25rem;
-  transition: transform var(--transition-fast), border-color var(--transition-fast);
+  gap: 16px;
+  box-shadow: var(--shadow-sm);
+  transition: border-color 0.2s;
 }
 
 .cert-card:hover {
-  transform: translateY(-3px);
-  border-color: rgba(56, 189, 248, 0.4);
+  border-color: var(--accent);
 }
 
 .cert-icon-wrapper {
-  font-size: 1.75rem;
-  background-color: var(--bg-main);
-  border: 1px solid var(--border-color);
-  width: 52px;
-  height: 52px;
-  border-radius: var(--radius-sm);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
-.cert-details {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
+  font-size: 1.8rem;
 }
 
 .cert-issuer {
   font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+  font-weight: 600;
   color: var(--accent);
-  font-weight: 700;
-  margin-bottom: 0.25rem;
+  text-transform: uppercase;
 }
 
 .cert-title {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: var(--text-primary);
-  line-height: 1.35;
-  margin-bottom: 0.5rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 4px 0 6px 0;
 }
 
 .cert-desc {
-  font-size: 0.9rem;
-  color: var(--text-secondary);
-  line-height: 1.5;
-  margin-bottom: 1rem;
-  flex-grow: 1;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 12px;
 }
 
 .cert-meta {
   display: flex;
+  gap: 10px;
   align-items: center;
-  justify-content: space-between;
   flex-wrap: wrap;
-  gap: 0.75rem;
-  padding-top: 0.75rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .cert-badge {
   font-size: 0.75rem;
-  background-color: var(--bg-main);
-  color: var(--text-secondary);
-  padding: 0.25rem 0.5rem;
-  border-radius: var(--radius-sm);
-  border: 1px solid var(--border-color);
-}
-
-.cert-status {
-  font-size: 0.8rem;
-  color: var(--text-secondary);
+  background: #f1f5f9;
+  padding: 3px 8px;
+  border-radius: 4px;
+  color: #475569;
 }
 
 .cert-verify-link {
-  font-size: 0.85rem;
-  font-weight: 600;
+  font-size: 0.8rem;
   color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
 }
 
 .cert-verify-link:hover {
   text-decoration: underline;
+}
+
+/* Responsive mobile */
+@media (max-width: 768px) {
+  .hero-layout {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+  .hero-actions {
+    justify-content: center;
+  }
+  .nav-links {
+    display: none; /* In seguito si può fare un burger menu */
+  }
 }
